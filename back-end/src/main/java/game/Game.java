@@ -32,6 +32,12 @@ public class Game {
         this.history = history;
     }
 
+    public Game unDo() {
+        if (this.history.size() == 0)
+            return this;
+        return this.history.get(this.history.size() - 1);
+    }
+
     public Board getBoard() {
         return this.board;
     }
